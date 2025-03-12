@@ -8,7 +8,7 @@ You can use the following guide to learn how and why to create a pull request.
 
 A pull request is a way to suggest changes to a repository. When you create a pull request, you propose your changes and request that someone review and pull in your contribution and merge them into their branch. Pull requests show differences between the content from both branches and the changes are visible in the repository.
 
-<!-- TODO: Add information on PRs and forks. -->
+Forking is the process of taking a copy of someone's repository and making your own working copy. While a soft link is still maintained with the original repository, all changes made are yours and will not impact the original in any way. The only way to implement changes back into the original repository is to create a Pull Request which will allow the owner to review and either accept and merge, or reject the request.
 
 ## Set up your environment
 
@@ -39,7 +39,7 @@ cp ~/Downloads/README.md .
 1. In the terminal, add the URL of the repository you created on GitHub as the remote repository.
 
 ```bash
-git remote add origin <URL>
+git remote add origin https://github.com/ChandlAJ/my-first-pr
 ```
 
 2. Check that the remote repository was added.
@@ -50,6 +50,7 @@ git remote -v
 
 3. Consider why it does not provide a URL for pull, only `push` and `fetch`?
 
+'pull' is not a Git feature, instead it is a feature of GitHub. The reminology in Git is 'fetch' and as such these are the available options.
 ---
 
 4. Push the local repository to the remote repository.
@@ -62,9 +63,8 @@ git remote -v
 
 ### Why are pull requests called "Pull Requests"? (wrong answer)
 
-Pull requests are so named basically because you are asking to _pull_ changes from a remote to your local repository. And that's because you have to ask permission to copy changes out of the repository, even if you have read access to that repository.
+Pull requests are so named because you are asking for another person to _pull_ changes from your local repository to their remote repository. That is you have cannot push changes directly into the remote repository, you must ask permission for your changes to be reviewed and pulled/merged before any changes to the other person's remote can be made.
 
-<!--TODO: This answer is SO wrong, I think we need to fix it! -->
 
 ### Create a local branch
 
